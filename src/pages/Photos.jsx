@@ -1,13 +1,17 @@
+import { useLayoutEffect } from 'react';
 import { photos } from '../../data/photos';
 import leoFoto from '../../public/assets/img/Leo_FondoTransp.png';
-export const Photos = () => {
+export const Photos = ({ pathname }) => {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
     return (
         <section className="section-esp" >
             <div id="carouselExampleInterval" className="carousel slide rounded mb-3 shadow" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     {
                         photos.map(photo => (
-                            <div className="carousel-item active" data-bs-interval="1000" key={photo.id}>
+                            <div className="carousel-item active" data-bs-interval="10000" key={photo.id}>
                                 <img src={photo.imgUrl} className="d-block w-100" alt="photo" />
                             </div>
                         ))
