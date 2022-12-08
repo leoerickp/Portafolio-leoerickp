@@ -16,8 +16,8 @@ export const Footer = () => {
                 <div>
                     <h5>My stack</h5>
                     <ul className="m-2 p-0">
-                        <li><NavLink className="nav-link" to="/languages">Frontend tech</NavLink></li>
-                        <li><NavLink className="nav-link" to="/frameworks">Backend tech</NavLink></li>
+                        <li><NavLink className="nav-link" to="/frontend">Frontend tech</NavLink></li>
+                        <li><NavLink className="nav-link" to="/backend">Backend tech</NavLink></li>
                         <li><NavLink className="nav-link" to="/others">Other knowledge</NavLink></li>
                     </ul>
                 </div>

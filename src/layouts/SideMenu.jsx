@@ -41,7 +41,7 @@ export const SideMenu = () => {
                         <li>
                             <NavLink
                                 className="dropdown-item"
-                                to="/languages"
+                                to="/frontend"
                                 aria-current="page"
                             >
                                 Frontend tech
@@ -51,7 +51,7 @@ export const SideMenu = () => {
                         <li>
                             <NavLink
                                 className="dropdown-item"
-                                to="/frameworks"
+                                to="/backend"
                                 aria-current="page"
                             >
                                 Backend tech

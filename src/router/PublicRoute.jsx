@@ -20,8 +20,8 @@ export const PublicRoute = () => {
                     <Route path="/home" element={<Home />} />
                     <Route path="/experience" element={<Experience />} />
                     <Route path="/projects" element={<Projects />} />
-                    <Route path="/frameworks" element={<Frameworks />} />
-                    <Route path="/languages" element={<Languages />} />
+                    <Route path="/backend" element={<Frameworks />} />
+                    <Route path="/frontend" element={<Languages />} />
                     <Route path="/others" element={<Oknoledge />} />
                     <Route path="/resume" element={<Resume />} />
                     <Route path="/photos" element={<Photos />} />
