@@ -21,6 +21,23 @@ h5 span {
     font-weight: bold;
 }
 
+a {
+    color: #D4AF37;
+}
+
+a:hover {
+    color: #ffda5f;
+}
+
+footer li a {
+    color: white;
+}
+
+footer li a:hover {
+    color: #fffc99 !important;
+    background-color: transparent !important;
+}
+
 .img-Foto {
     width: 4rem;
 }
@@ -89,13 +106,12 @@ h5 span {
 }
 
 .footer h5 {
-    color: #D1CA00;
+    color: #D4AF37;
     text-shadow: #000000;
 }
 
 .footer li {
     list-style: none;
-
 }
 
 .nav-link:hover {
