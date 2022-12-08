@@ -6,6 +6,7 @@ import { beskills } from '../../data/backendskills';
 export const Frameworks = ({ pathname }) => {
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
+        document.querySelector('nav').style.backgroundColor = "rgba(8, 57, 82, 1)";
     }, [pathname]);
     return (
         <section className="section-esp" >

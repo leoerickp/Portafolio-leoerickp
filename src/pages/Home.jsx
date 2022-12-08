@@ -1,10 +1,41 @@
-import { useLayoutEffect } from "react";
+import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 export const Home = ({ pathname }) => {
+    const [y, setY] = useState(window.scrollY);
+
+    const handleNavigation = useCallback(
+        (e) => {
+            const window = e.currentTarget;
+            if (y > window.scrollY) {
+                //console.log("scrolling up");
+
+            } else if (y < window.scrollY) {
+                //console.log("scrolling down");
+            }
+            setY(window.scrollY);
+        },
+        [y]
+    );
+
+    useEffect(() => {
+        setY(window.scrollY);
+        if (y === 0) {
+            document.querySelector('nav').style.backgroundColor = "rgba(8, 57, 82, 0.3)";
+        } else {
+            document.querySelector('nav').style.backgroundColor = "rgba(8, 57, 82, 1)";
+        }
+        window.addEventListener("scroll", handleNavigation);
+
+        return () => {
+            window.removeEventListener("scroll", handleNavigation);
+        };
+    }, [handleNavigation]);
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
+        document.querySelector('nav').style.backgroundColor = "rgba(8, 57, 82, 0.3)";
     }, [pathname]);
+
     return (
         <>
             <section className="vh-100">

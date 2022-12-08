@@ -38,6 +38,11 @@ footer li a:hover {
     background-color: transparent !important;
 }
 
+footer p {
+    border-top: 1px solid #818181;
+    color: #fffc99;
+}
+
 .img-Foto {
     width: 4rem;
 }
@@ -88,7 +93,7 @@ footer li a:hover {
 }
 
 .bgcolor-menu {
-    background: #083952;
+    background: rgba(8, 57, 82, 0.3);
     text-shadow: #000000 2px 2px;
 }
 
