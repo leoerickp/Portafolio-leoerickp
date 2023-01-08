@@ -5,7 +5,7 @@ export const DataBaseEngine = ({ title, dbdata }) => {
     return (
         <>
             <div className='text-center'>
-                <h2>{title}</h2>
+                <h3>{title}</h3>
                 <hr />
             </div>
             <div className="row gap-3 justify-content-center">

@@ -1,7 +1,9 @@
-import { useCallback, useEffect, useLayoutEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useLayoutEffect, useState } from "react";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { NavColorContext } from "../context/NavColorContext";
 
 export const Home = ({ pathname }) => {
+    const { backgroundColor, setBackgroundColor } = useContext(NavColorContext);
     const [y, setY] = useState(window.scrollY);
 
     const handleNavigation = useCallback(
@@ -20,11 +22,33 @@ export const Home = ({ pathname }) => {
 
     useEffect(() => {
         setY(window.scrollY);
-        if (y === 0) {
-            document.querySelector('nav').style.backgroundColor = "rgba(8, 57, 82, 0.3)";
-        } else {
-            document.querySelector('nav').style.backgroundColor = "rgba(8, 57, 82, 1)";
+        const { a } = backgroundColor;
+        if (y >= 0 && y < 50) {
+            if (a !== 0.3) {
+                setBackgroundColor({ ...backgroundColor, a: 0.3 });
+            }
         }
+        else if (y >= 50 && y < 150) {
+            if (a !== 0.5) {
+                setBackgroundColor({ ...backgroundColor, a: 0.5 });
+            }
+        }
+        else if (y >= 150 && y < 250) {
+            if (a !== 0.7) {
+                setBackgroundColor({ ...backgroundColor, a: 0.7 });
+            }
+        }
+        else if (y >= 250 && y < 350) {
+            if (a !== 0.9) {
+                setBackgroundColor({ ...backgroundColor, a: 0.9 });
+            }
+        }
+        else if (y >= 350 && y < 450) {
+            if (a !== 1) {
+                setBackgroundColor({ ...backgroundColor, a: 1 });
+            }
+        }
+
         window.addEventListener("scroll", handleNavigation);
 
         return () => {
@@ -33,7 +57,8 @@ export const Home = ({ pathname }) => {
     }, [handleNavigation]);
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
-        document.querySelector('nav').style.backgroundColor = "rgba(8, 57, 82, 0.3)";
+        //document.querySelector('nav').style.backgroundColor = "rgba(8, 57, 82, 0.3)";
+
     }, [pathname]);
 
     return (

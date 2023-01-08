@@ -1,14 +1,16 @@
 body {
     margin: 0;
-    background-color: #d3eaff;
+    background-color: #86A0A6;
 }
 
 h1 {
-    color: #D12A3B;
+    color: #0E2426;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 h2 {
     color: #858007;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 h3 {
@@ -94,7 +96,8 @@ footer p {
 
 .bgcolor-menu {
     background: rgba(8, 57, 82, 0.3);
-    text-shadow: #000000 2px 2px;
+
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 .font-logo {
