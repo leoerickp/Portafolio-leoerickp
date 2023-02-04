@@ -1,4 +1,6 @@
 import { Route, Routes } from "react-router-dom";
+import { Login } from "../pages/Login";
+import { AdminRoute } from "../admin/router/AdminRoute";
 import { Header, Footer } from "../layouts";
 import { Contact } from "../pages/Contact";
 import { Experience } from "../pages/Experience";
@@ -9,12 +11,13 @@ import { Oknoledge } from "../pages/Oknowledge";
 import { Photos } from "../pages/Photos";
 import { Projects } from "../pages/Projects";
 import { Resume } from "../pages/Resume";
+import { PageNotFoud } from "../pages/PageNotFoud";
 
 export const PublicRoute = () => {
     return (
         <>
             <Header />
-            <main className="container">
+            <main className="container main-container">
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
@@ -26,7 +29,8 @@ export const PublicRoute = () => {
                     <Route path="/resume" element={<Resume />} />
                     <Route path="/photos" element={<Photos />} />
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="/*" element={<Home />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/*" element={<PageNotFoud />} />
                 </Routes>
             </main>
             <Footer />

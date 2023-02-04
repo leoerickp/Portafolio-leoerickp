@@ -1,10 +1,12 @@
-import { useLayoutEffect } from 'react';
+import { useContext, useLayoutEffect } from 'react';
 import { photos } from '../../data/photos';
-import leoFoto from '../../public/assets/img/Leo_FondoTransp.png';
+import leoFoto from '../assets/img/Leo_FondoTransp.png';
+import { NavColorContext } from '../context/NavColorContext';
 export const Photos = ({ pathname }) => {
+    const { setNavbarBackgroundColor, navbarBackgroundColorInit } = useContext(NavColorContext);
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
-        document.querySelector('nav').style.backgroundColor = "rgba(8, 57, 82, 1)";
+        setNavbarBackgroundColor(navbarBackgroundColorInit)
     }, [pathname]);
     return (
         <section className="section-esp" >
@@ -37,7 +39,7 @@ export const Photos = ({ pathname }) => {
                     </div>
                     <div className="col-md-8 p-2">
                         <div className="card-body fs-2 align-middle">
-                            <h1 className="card-title">Leo Erick Perayra Rodriguez</h1>
+                            <h1 className="card-title">Leo Erick Pereyra Rodriguez</h1>
                             <p className="card-text">La Paz - Bolivia</p>
                             <p className="card-text"><small className="text-muted">English level: (B2)</small></p>
                             <h2 className="card-text">See you soon!</h2>

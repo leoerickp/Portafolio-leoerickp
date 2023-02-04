@@ -1,11 +1,11 @@
 
 import { NavColorProvider } from "./context/NavColorProvider";
-import { PublicRoute } from "./router/PublicRoute";
+import { AppRoute } from "./router/AppRoute";
 
 export const Portafolio = () => {
     return (
         <NavColorProvider>
-            <PublicRoute />
+            <AppRoute />
         </NavColorProvider>
     )
 }

@@ -1,11 +1,13 @@
-import { useLayoutEffect } from "react";
+import { useContext, useLayoutEffect } from "react";
 import { TechRightCard } from "../components/TechRightCard";
 import { feskills } from '../../data/frontendskills';
+import { NavColorContext } from "../context/NavColorContext";
 
 export const Languages = ({ pathname }) => {
+    const { setNavbarBackgroundColor, navbarBackgroundColorInit } = useContext(NavColorContext);
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
-        document.querySelector('nav').style.backgroundColor = "rgba(8, 57, 82, 1)";
+        setNavbarBackgroundColor(navbarBackgroundColorInit)
     }, [pathname]);
     return (
         <section className="section-esp" >

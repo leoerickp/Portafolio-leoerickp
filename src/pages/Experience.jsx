@@ -1,11 +1,13 @@
-import { useLayoutEffect } from "react";
+import { useContext, useLayoutEffect } from "react";
 import { ExpierenceCard } from "../components/ExpierenceCard";
 import { experiences } from '../../data/experiences';
+import { NavColorContext } from "../context/NavColorContext";
 
 export const Experience = ({ pathname }) => {
+    const { setNavbarBackgroundColor, navbarBackgroundColorInit } = useContext(NavColorContext);
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
-        document.querySelector('nav').style.backgroundColor = "rgba(8, 57, 82, 1)";
+        setNavbarBackgroundColor(navbarBackgroundColorInit)
     }, [pathname]);
     return (
         <section className="section-esp" >

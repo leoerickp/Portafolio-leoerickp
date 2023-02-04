@@ -22,6 +22,14 @@ h5 span {
     color: #858007;
     font-weight: bold;
 }
+.main-container{
+    background-color: whitesmoke;
+}
+
+.main-container-admin{
+    background-color: whitesmoke;
+    height: 100px !important;
+}
 
 a {
     color: #D4AF37;
@@ -31,11 +39,12 @@ a:hover {
     color: #ffda5f;
 }
 
-footer li a {
+.footer-a {
     color: white;
+    padding: 0;
 }
 
-footer li a:hover {
+.footer-a:hover {
     color: #fffc99 !important;
     background-color: transparent !important;
 }
@@ -56,7 +65,7 @@ footer p {
 .Nu95r {
     background-size: cover;
     background-position: center -20px;
-    background-image: url('../public/assets/img/img1.jpg');
+    background-image: url('./assets/img/img1.jpg');
     transform: translate3d(0px, 0px, 0px);
 
     height: 100%;
@@ -166,3 +175,51 @@ footer p {
     top: 15%;
     left: 10%;
 }
+
+/** AdminStyles **/
+.head-navbar{
+    color: #86A0A6 !important;
+}
+.img-tech{    
+    max-width: 31px;
+    max-height: 31px;
+}
+
+td a:hover{
+    color:#083952
+}
+
+.img-tech-mid{
+    max-height: 55px;    
+    max-width: 55px;    
+}
+.img-thumb{
+    max-height: 150px;
+    max-width: 150px;
+}
+
+.photo-thumb{
+    max-height: 250px;
+    max-width: 250px;
+}
+
+textarea{
+    height: 200px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:  #343a40;
+    border-radius: 10px;
+  } 

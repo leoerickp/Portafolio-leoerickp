@@ -1,12 +1,14 @@
-import { useLayoutEffect } from "react";
+import { useContext, useLayoutEffect } from "react";
 import { DataBaseEngine } from "../components/DataBaseEngine";
 import { dbengines } from '../../data/dbengines';
 import { otherTech } from '../../data/otherTech';
+import { NavColorContext } from "../context/NavColorContext";
 
 export const Oknoledge = ({ pathname }) => {
+    const { setNavbarBackgroundColor, navbarBackgroundColorInit } = useContext(NavColorContext);
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
-        document.querySelector('nav').style.backgroundColor = "rgba(8, 57, 82, 1)";
+        setNavbarBackgroundColor(navbarBackgroundColorInit)
     }, [pathname]);
     return (
         <section className="section-esp" >

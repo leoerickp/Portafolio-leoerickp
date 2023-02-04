@@ -1,9 +1,11 @@
-import { useLayoutEffect } from 'react';
-import resumePdf from '../../public/assets/docs/Resume_Leo_Pereyra_ENG.pdf';
+import { useContext, useLayoutEffect } from 'react';
+import resumePdf from '../assets/docs/Resume_Leo_Pereyra_ENG.pdf';
+import { NavColorContext } from '../context/NavColorContext';
 export const Resume = ({ pathname }) => {
+    const { setNavbarBackgroundColor, navbarBackgroundColorInit } = useContext(NavColorContext);
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
-        document.querySelector('nav').style.backgroundColor = "rgba(8, 57, 82, 1)";
+        setNavbarBackgroundColor(navbarBackgroundColorInit)
     }, [pathname]);
     return (
         <section className="section-esp" >

@@ -1,5 +1,5 @@
 
-import leoFoto from '../../public/assets/img/Leo_FondoTransp.png';
+import leoFoto from '../assets/img/Leo_FondoTransp.png';
 import { SocialNet } from '../components/SocialNet';
 import { SideMenu } from './SideMenu';
 
